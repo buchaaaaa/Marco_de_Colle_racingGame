@@ -4,7 +4,12 @@ public class pause : MonoBehaviour
 {
     public GameObject pauseMenuUI;
 
-    private bool isPause5
+    private bool isPaused = false;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
             if (isPaused)
                 Resume();
             else
